@@ -12,11 +12,9 @@ export default function TabTwoScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
+        <Image
+                  source={require('@/assets/images/IMG_2054 (1).png')}
+                  style={styles.reactLogo}
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -49,7 +47,7 @@ export default function TabTwoScreen() {
           <ThemedText type="defaultSemiBold"></ThemedText> 
           
         </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
+        
         <ExternalLink href="https://reactnative.dev/docs/images">
           <ThemedText type="link"></ThemedText>
         </ExternalLink>
@@ -96,14 +94,16 @@ export default function TabTwoScreen() {
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
+  reactLogo: {
+    height: "100%",
+    width: "100%",
+    bottom: 0,
+    left: 0,
     position: 'absolute',
   },
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+    
   },
 });
